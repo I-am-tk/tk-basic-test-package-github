@@ -1,4 +1,3 @@
-// src/components/Button.test.jsx
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { test, expect } from "vitest";
@@ -14,6 +13,6 @@ test("renders Button component and checks data attribute", () => {
 
   // Assert
   const buttonElement = screen.getByRole("button");
-  // expect(buttonElement).toHaveAttribute("data-test", dataAttr);
+  expect(buttonElement).toHaveAttribute("data-test", dataAttr);
   expect(buttonElement).toHaveTextContent(label);
 });
