@@ -1,6 +1,8 @@
 import React from "react";
-const Button = () => {
-  return <button>V1</button>;
+
+interface ButtonProps extends React.ComponentProps<"button"> {}
+const Button = (props: ButtonProps) => {
+  return <button>{props.children || "V1"}</button>;
 };
 
 export default Button;
